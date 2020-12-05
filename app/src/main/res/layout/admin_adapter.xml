@@ -53,7 +53,7 @@
                 android:layout_height="38dp"
                 android:layout_marginStart="280dp"
                 android:layout_marginTop="24dp"
-                android:background="@color/warna_ketiga"
+                android:background="@drawable/lingkaran"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_admin_nama_prestasi"
                 app:srcCompat="@drawable/ic_baseline_check_24" />
@@ -64,7 +64,7 @@
                 android:layout_height="38dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="24dp"
-                android:background="@color/warna_ketiga"
+                android:background="@drawable/lingkaran"
                 app:layout_constraintStart_toEndOf="@+id/ib_approve"
                 app:layout_constraintTop_toBottomOf="@+id/tv_admin_nama_prestasi"
                 app:srcCompat="@drawable/ic_baseline_close_24" />
