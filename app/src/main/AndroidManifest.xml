@@ -11,18 +11,18 @@
         android:theme="@style/Theme.CaPres">
         <activity android:name=".ui.user.UserActivity"></activity>
         <activity android:name=".ui.user.UserDetailActivity" />
-        <activity android:name=".ui.splash.SplashActivity" />
+        <activity android:name=".ui.splash.SplashActivity"><intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity android:name=".ui.login.LoginActivity" />
         <activity android:name=".ui.admin.AdminActivity" />
         <activity android:name=".ui.admin.AdminDetailActivity" />
         <activity android:name=".adapter.AdminAdapter" />
         <activity android:name=".adapter.UserAdapter" />
         <activity android:name=".ui.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
