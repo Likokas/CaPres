@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/warna_kedua"
     tools:context=".ui.splash.SplashActivity">
 
     <TextView
@@ -11,10 +12,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="104dp"
+        android:fontFamily="@font/style1"
         android:text="CaPres"
         android:textColor="@color/warna_utama"
         android:textSize="36sp"
-        android:fontFamily="@font/style1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
