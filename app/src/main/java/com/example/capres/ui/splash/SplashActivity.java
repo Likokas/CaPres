@@ -10,6 +10,7 @@ import android.view.WindowManager;
 
 import com.example.capres.R;
 import com.example.capres.ui.login.LoginActivity;
+import com.example.capres.util.SharedPreferenceHelper;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -35,5 +36,7 @@ public class SplashActivity extends AppCompatActivity {
             }
         };
         thread.start();
+
+//        SharedPreferenceHelper helper = SharedPreferenceHelper.getInstance();
     }
 }
