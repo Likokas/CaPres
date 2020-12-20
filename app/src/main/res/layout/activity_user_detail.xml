@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.user.UserDetailActivity">
 
+
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.user.UserDetailActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
     <TextView
         android:id="@+id/tv_nama_prestasi"
         android:layout_width="436dp"
@@ -14,7 +21,6 @@
         android:backgroundTint="@color/warna_utama"
         android:gravity="center"
         android:text="Nama Prestasi"
-        android:fontFamily="@font/sty2"
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="#FFFFFF"
@@ -31,7 +37,6 @@
         android:layout_marginBottom="8dp"
         android:text="FULL NAME"
         android:textAllCaps="true"
-        android:fontFamily="@font/sty2"
         android:textColor="@color/warna_utama"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -40,13 +45,25 @@
         app:layout_constraintHorizontal_bias="0.142"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
+        <TextView
+            android:id="@+id/tv_nama"
+            android:layout_width="325dp"
+            android:layout_height="37dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/textview_border"
+            android:text="JoKeLi"
+            android:textAllCaps="true"
+            app:layout_constraintBottom_toTopOf="@+id/textView6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.523"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
         android:text="NAMA EVENT"
-        android:fontFamily="@font/sty2"
         android:textAllCaps="true"
         android:textColor="@color/warna_utama"
         android:textSize="18sp"
@@ -56,13 +73,24 @@
         app:layout_constraintHorizontal_bias="0.147"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
+        <TextView
+            android:id="@+id/tv_nama_event"
+            android:layout_width="325dp"
+            android:layout_height="37dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/textview_border"
+            android:text="NPLC"
+            app:layout_constraintBottom_toTopOf="@+id/textView8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.511"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:text="TANGGAL INPUT"
-        android:fontFamily="@font/sty2"
         android:textAllCaps="true"
         android:textColor="@color/warna_utama"
         android:textSize="18sp"
@@ -72,14 +100,25 @@
         app:layout_constraintHorizontal_bias="0.164"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
+        <TextView
+            android:id="@+id/tv_tanggal_input"
+            android:layout_width="325dp"
+            android:layout_height="37dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/textview_border"
+            android:text="2019-10-02"
+            app:layout_constraintBottom_toTopOf="@+id/textView9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.523"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:text="PEMBIMBING"
         android:textAllCaps="true"
-        android:fontFamily="@font/sty2"
         android:textColor="@color/warna_utama"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -88,13 +127,24 @@
         app:layout_constraintHorizontal_bias="0.15"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
+        <TextView
+            android:id="@+id/tv_link_gdrive"
+            android:layout_width="325dp"
+            android:layout_height="37dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/textview_border"
+            android:text="gdrive.com"
+            app:layout_constraintBottom_toTopOf="@+id/textView14"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.523"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:text="KETERANGAN EVENT"
-        android:fontFamily="@font/sty2"
         android:textAllCaps="true"
         android:textColor="@color/warna_utama"
         android:textSize="18sp"
@@ -104,13 +154,25 @@
         app:layout_constraintHorizontal_bias="0.186"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
+        <TextView
+            android:id="@+id/tv_keterangan_event"
+            android:layout_width="325dp"
+            android:layout_height="37dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/textview_border"
+            android:text="Bla bla"
+            android:textAllCaps="true"
+            app:layout_constraintBottom_toTopOf="@+id/textView13"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.523"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
         android:text="LINK GDRIVE"
-        android:fontFamily="@font/sty2"
         android:textAllCaps="true"
         android:textColor="@color/warna_utama"
         android:textSize="18sp"
@@ -120,14 +182,28 @@
         app:layout_constraintHorizontal_bias="0.147"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
+        <TextView
+            android:id="@+id/tv_pembimbing"
+            android:layout_width="325dp"
+            android:layout_height="37dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/textview_border"
+            android:text="Laura"
+
+
+            android:textAllCaps="true"
+            app:layout_constraintBottom_toTopOf="@+id/textView11"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.523"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:text="PENYELENGGARA"
         android:textAllCaps="true"
-        android:fontFamily="@font/sty2"
         android:textColor="@color/warna_utama"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -136,101 +212,19 @@
         app:layout_constraintHorizontal_bias="0.17"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/tv_nama"
-        android:layout_width="325dp"
-        android:layout_height="37dp"
-        android:layout_marginBottom="12dp"
-        android:background="@drawable/textview_border"
-        android:text="JoKeLi"
-        android:fontFamily="@font/sty2"
-        android:textAllCaps="true"
-        app:layout_constraintBottom_toTopOf="@+id/textView6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.523"
-        app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/tv_nama_event"
-        android:layout_width="325dp"
-        android:layout_height="37dp"
-        android:layout_marginBottom="12dp"
-        android:background="@drawable/textview_border"
-        android:text="NPLC"
-        android:fontFamily="@font/sty2"
-        app:layout_constraintBottom_toTopOf="@+id/textView8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.511"
-        app:layout_constraintStart_toStartOf="parent" />
+        <TextView
+            android:id="@+id/tv_penyelenggara"
+            android:layout_width="325dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="744dp"
+            android:background="@drawable/textview_border"
+            android:text="UC"
 
-    <TextView
-        android:id="@+id/tv_tanggal_input"
-        android:layout_width="325dp"
-        android:layout_height="37dp"
-        android:fontFamily="@font/sty2"
-        android:layout_marginBottom="12dp"
-        android:background="@drawable/textview_border"
-        android:text="2019-10-02"
-        app:layout_constraintBottom_toTopOf="@+id/textView9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.523"
-        app:layout_constraintStart_toStartOf="parent" />
+            android:textAllCaps="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-
-    <TextView
-        android:id="@+id/tv_link_gdrive"
-        android:layout_width="325dp"
-        android:layout_height="37dp"
-        android:layout_marginBottom="12dp"
-        android:background="@drawable/textview_border"
-        android:text="gdrive.com"
-        android:fontFamily="@font/sty2"
-        app:layout_constraintBottom_toTopOf="@+id/textView14"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.523"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_keterangan_event"
-        android:layout_width="325dp"
-        android:layout_height="37dp"
-        android:layout_marginBottom="16dp"
-        android:fontFamily="@font/sty2"
-        android:background="@drawable/textview_border"
-        android:text="Bla bla"
-        android:textAllCaps="true"
-        app:layout_constraintBottom_toTopOf="@+id/textView13"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.523"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_pembimbing"
-        android:layout_width="325dp"
-        android:layout_height="37dp"
-        android:layout_marginBottom="12dp"
-        android:background="@drawable/textview_border"
-        android:text="Laura"
-        android:fontFamily="@font/sty2"
-
-        android:textAllCaps="true"
-        app:layout_constraintBottom_toTopOf="@+id/textView11"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.523"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_penyelenggara"
-        android:layout_width="325dp"
-        android:layout_height="37dp"
-        android:layout_marginTop="744dp"
-        android:background="@drawable/textview_border"
-        android:text="UC"
-        android:fontFamily="@font/sty2"
-
-        android:textAllCaps="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
