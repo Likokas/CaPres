@@ -2,6 +2,8 @@ package com.example.capres.ui.admin;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProviders;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,16 +14,23 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.capres.R;
+import com.example.capres.adapter.AdminAdapter;
+import com.example.capres.adapter.UserAdapter;
+import com.example.capres.model.Event;
 import com.example.capres.ui.login.LoginActivity;
 import com.example.capres.ui.login.LoginViewModel;
 import com.example.capres.ui.user.UserActivity;
 import com.example.capres.util.SharedPreferenceHelper;
 
+import java.util.List;
+
 public class AdminActivity extends AppCompatActivity {
 
+    RecyclerView rv_admin;
     Button btn_logout;
     private AdminViewModel viewModel;
     private SharedPreferenceHelper helper;
+//    List<Event> list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +39,12 @@ public class AdminActivity extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_admin);
+
+//        rv_admin = findViewById(R.id.rv_admin);
+//        rv_admin.setLayoutManager(new LinearLayoutManager(AdminActivity.this));
+//        AdminAdapter adminAdapter = new AdminAdapter(AdminActivity.this);
+//        adminAdapter.setEventList(list);
+//        rv_admin.setAdapter(adminAdapter);
 
         viewModel = ViewModelProviders.of(this).get(AdminViewModel.class);
         helper = SharedPreferenceHelper.getInstance(this);

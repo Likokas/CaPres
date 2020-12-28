@@ -67,30 +67,30 @@ public class EventRepository {
         return liveEvents;
     }
 
-    public MutableLiveData<String> logout(){
-        MutableLiveData<String> message = new MutableLiveData<>();
-        apiService.logout().enqueue(new Callback<LogoutResponse>() {
-            @Override
-            public void onResponse(Call<LogoutResponse> call, Response<LogoutResponse> response) {
-                if (response.isSuccessful()){
-                    if (response.body()!=null){
-                        try {
-                            JSONObject object = new JSONObject(new Gson().toJson(response.body()));
-                            String msg = object.getString("message");
-                            Log.d(TAG, "onResponse: "+msg);
-                            message.postValue(msg);
-                        }catch (JSONException e){
-                            e.printStackTrace();
-                        }
-                    }
-                }
-            }
-
-            @Override
-            public void onFailure(Call<LogoutResponse> call, Throwable t) {
-                Log.d(TAG, "onFailure: "+t.getMessage());
-            }
-        });
-        return message;
-    }
+//    public MutableLiveData<String> logout(){
+//        MutableLiveData<String> message = new MutableLiveData<>();
+//        apiService.logout().enqueue(new Callback<LogoutResponse>() {
+//            @Override
+//            public void onResponse(Call<LogoutResponse> call, Response<LogoutResponse> response) {
+//                if (response.isSuccessful()){
+//                    if (response.body()!=null){
+//                        try {
+//                            JSONObject object = new JSONObject(new Gson().toJson(response.body()));
+//                            String msg = object.getString("message");
+//                            Log.d(TAG, "onResponse: "+msg);
+//                            message.postValue(msg);
+//                        }catch (JSONException e){
+//                            e.printStackTrace();
+//                        }
+//                    }
+//                }
+//            }
+//
+//            @Override
+//            public void onFailure(Call<LogoutResponse> call, Throwable t) {
+//                Log.d(TAG, "onFailure: "+t.getMessage());
+//            }
+//        });
+//        return message;
+//    }
 }

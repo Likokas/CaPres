@@ -16,12 +16,12 @@ import com.example.capres.model.Event;
 
 import java.util.List;
 
-public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
+public class AdminAdapter extends RecyclerView.Adapter<AdminAdapter.ViewHolder> {
 
     private Context context;
     private List<Event> eventList;
 
-    public UserAdapter(Context context) {
+    public AdminAdapter(Context context) {
         this.context = context;
     }
 
@@ -32,16 +32,15 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
 
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.user_adapter, parent, false);
-        return new ViewHolder(view);
+    public AdminAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(context).inflate(R.layout.admin_adapter, parent, false);
+        return new AdminAdapter.ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull AdminAdapter.ViewHolder holder, int position) {
         Event event = eventList.get(position);
-        holder.tvPrestasi.setText(event.getPrestasi());
-//        holder.tvStatus.setText(event.getApproved());
+        holder.tvAPrestasi.setText(event.getPrestasi());
     }
 
     @Override
@@ -51,12 +50,11 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView tvPrestasi, tvStatus;
+        private TextView tvAPrestasi, tvStatus;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            tvPrestasi = itemView.findViewById(R.id.tv_user_nama_prestasi);
-//            tvStatus = itemView.findViewById(R.id.tv_status);
+            tvAPrestasi = itemView.findViewById(R.id.tv_admin_nama_prestasi);
 
         }
     }
