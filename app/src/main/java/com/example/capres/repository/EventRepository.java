@@ -4,10 +4,12 @@ import android.util.Log;
 
 import androidx.lifecycle.MutableLiveData;
 
+import com.example.capres.MyApplication;
 import com.example.capres.model.Event;
 import com.example.capres.model.response.EventResponse;
 import com.example.capres.model.response.LogoutResponse;
 import com.example.capres.network.RetrofitService;
+import com.example.capres.util.SharedPreferenceHelper;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 
@@ -25,23 +27,16 @@ public class EventRepository {
     private static EventRepository eventRepository;
     private RetrofitService apiService;
     private static final String TAG = "EventRepository";
+    private SharedPreferenceHelper prefs;
 
-    private EventRepository(String token){
-        Log.d(TAG, "EventRepository: "+token);
-        apiService = RetrofitService.getInstance(token);
+    private EventRepository(){
+        prefs = SharedPreferenceHelper.getInstance(MyApplication.getContext());
+        apiService = RetrofitService.getInstance(prefs.getAccessToken());
     }
 
-    public static EventRepository getInstance(String token){
-        if (eventRepository==null){
-            eventRepository = new EventRepository(token);
-        }
+    public static EventRepository getInstance(){
+        eventRepository = new EventRepository();
         return eventRepository;
-    }
-
-    public synchronized void resetInstance(){
-        if (eventRepository!=null){
-            eventRepository = null;
-        }
     }
 
     public MutableLiveData<List<Event>> getEvents(){
@@ -66,31 +61,4 @@ public class EventRepository {
 
         return liveEvents;
     }
-
-//    public MutableLiveData<String> logout(){
-//        MutableLiveData<String> message = new MutableLiveData<>();
-//        apiService.logout().enqueue(new Callback<LogoutResponse>() {
-//            @Override
-//            public void onResponse(Call<LogoutResponse> call, Response<LogoutResponse> response) {
-//                if (response.isSuccessful()){
-//                    if (response.body()!=null){
-//                        try {
-//                            JSONObject object = new JSONObject(new Gson().toJson(response.body()));
-//                            String msg = object.getString("message");
-//                            Log.d(TAG, "onResponse: "+msg);
-//                            message.postValue(msg);
-//                        }catch (JSONException e){
-//                            e.printStackTrace();
-//                        }
-//                    }
-//                }
-//            }
-//
-//            @Override
-//            public void onFailure(Call<LogoutResponse> call, Throwable t) {
-//                Log.d(TAG, "onFailure: "+t.getMessage());
-//            }
-//        });
-//        return message;
-//    }
 }
