@@ -16,10 +16,12 @@ import java.util.List;
 public class AdminViewModel extends ViewModel {
 
     private AuthRepository repository;
+
     private EventRepository eventRepository;
 
     public AdminViewModel() {
         repository = AuthRepository.getInstance();
+        eventRepository = EventRepository.getInstance();
     }
 
     public LiveData<List<Event>> getEvents(){
@@ -29,5 +31,6 @@ public class AdminViewModel extends ViewModel {
     public MutableLiveData<LogoutResponse> logout(){
         return repository.logout();
     }
+
 }
 

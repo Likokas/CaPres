@@ -24,6 +24,9 @@ public interface Endpoints {
     @GET("events")
     Call<EventResponse> getEvents();
 
+    @GET("eventsU")
+    Call<EventResponse> getEventsU();
+
     @POST("logout")
     Call<LogoutResponse> logout();
 }

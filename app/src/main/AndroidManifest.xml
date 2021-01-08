@@ -14,7 +14,7 @@
         android:theme="@style/Theme.CaPres"
         android:usesCleartextTraffic="true">
         <activity android:name=".adapter.AdminAdapter"></activity>
-        <activity android:name=".ui.user.UserActivity" />
+        <activity android:name=".ui.user.UserEventActivity" />
         <activity android:name=".ui.user.UserDetailActivity" />
         <activity android:name=".ui.splash.SplashActivity">
             <intent-filter>
@@ -24,7 +24,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.login.LoginActivity" />
-        <activity android:name=".ui.admin.AdminActivity" />
+        <activity android:name=".ui.admin.AdminEventActivity" />
         <activity android:name=".ui.admin.AdminDetailActivity" />
         <activity android:name=".adapter.UserAdapter" />
         <activity android:name=".ui.MainActivity"></activity>
