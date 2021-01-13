@@ -73,6 +73,8 @@ public class RetrofitService {
         return api.getEvents();
     }
 
+    public Call<EventResponse> getEventsU(){return api.getEventsU();}
+
     public Call<LogoutResponse> logout(){
         return api.logout();
     }

@@ -20,8 +20,8 @@ public class Event {
     String tanggal;
     @SerializedName("pesan")
     String pesan;
-//    @SerializedName("is_approved")
-//    String approved;
+    @SerializedName("is_approved")
+    String approved;
 
 
     public String getEvent() {
@@ -86,5 +86,13 @@ public class Event {
 
     public void setPesan(String pesan) {
         this.pesan = pesan;
+    }
+
+    public String getApproved() {
+        return approved;
+    }
+
+    public void setApproved(String approved) {
+        this.approved = approved;
     }
 }

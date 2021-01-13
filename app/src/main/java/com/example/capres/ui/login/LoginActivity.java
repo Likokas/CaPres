@@ -2,8 +2,6 @@ package com.example.capres.ui.login;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProviders;
-import androidx.navigation.NavDirections;
-import androidx.navigation.Navigation;
 
 
 import android.content.Intent;
@@ -15,8 +13,8 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.capres.R;
-import com.example.capres.ui.admin.AdminActivity;
-import com.example.capres.ui.user.UserActivity;
+import com.example.capres.ui.admin.AdminEventActivity;
+import com.example.capres.ui.user.UserEventActivity;
 import com.example.capres.util.SharedPreferenceHelper;
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -56,7 +54,7 @@ public class LoginActivity extends AppCompatActivity {
                     viewModel.login(email,password).observe(LoginActivity.this, tokenResponse -> {
                         if (tokenResponse != null){
                             helper.saveAccessToken(tokenResponse.getAccessToken());
-                            Intent intent = new Intent(LoginActivity.this, UserActivity.class);
+                            Intent intent = new Intent(LoginActivity.this, UserEventActivity.class);
                             startActivity(intent);
                             Toast.makeText(LoginActivity.this,"Success",Toast.LENGTH_SHORT).show();
                         }else{
@@ -76,7 +74,7 @@ public class LoginActivity extends AppCompatActivity {
                     viewModel.loginAdmin(email,password).observe(LoginActivity.this, tokenResponse -> {
                         if (tokenResponse != null){
                             helper.saveAccessToken(tokenResponse.getAccessToken());
-                            Intent intent = new Intent(LoginActivity.this, AdminActivity.class);
+                            Intent intent = new Intent(LoginActivity.this, AdminEventActivity.class);
                             startActivity(intent);
                             Toast.makeText(LoginActivity.this,"Success",Toast.LENGTH_SHORT).show();
                         }else{
