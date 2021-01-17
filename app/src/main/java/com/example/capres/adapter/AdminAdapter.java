@@ -1,11 +1,11 @@
 package com.example.capres.adapter;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
-import android.os.Bundle;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.example.capres.R;
 import com.example.capres.model.Event;
+import com.example.capres.ui.admin.AdminDetailActivity;
 
 import java.util.List;
 
@@ -41,6 +42,15 @@ public class AdminAdapter extends RecyclerView.Adapter<AdminAdapter.ViewHolder> 
     public void onBindViewHolder(@NonNull AdminAdapter.ViewHolder holder, int position) {
         Event event = eventList.get(position);
         holder.tvAPrestasi.setText(event.getPrestasi());
+
+        holder.cardviewA.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(v.getContext(), AdminDetailActivity.class);
+                intent.putExtra("dataA", event);
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -51,10 +61,12 @@ public class AdminAdapter extends RecyclerView.Adapter<AdminAdapter.ViewHolder> 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         private TextView tvAPrestasi, tvStatus;
+        private CardView cardviewA;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             tvAPrestasi = itemView.findViewById(R.id.tv_admin_nama_prestasi);
+            cardviewA = itemView.findViewById(R.id.cardViewA);
 
         }
     }

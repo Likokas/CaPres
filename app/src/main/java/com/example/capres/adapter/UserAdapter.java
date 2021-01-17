@@ -1,13 +1,11 @@
 package com.example.capres.adapter;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -46,7 +44,14 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         final Event event = eventList.get(position);
         holder.tvPrestasi.setText(event.getPrestasi());
-        holder.tvStatus.setText(event.getApproved());
+        if(event.getApproved().equals("0")){
+            holder.tvStatus.setText("PENDING");
+        }else if (event.getApproved().equals("1")){
+            holder.tvStatus.setText("APPROVE");
+        }else {
+            holder.tvStatus.setText("DECLINE");
+        }
+
         holder.cardview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -73,7 +78,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
             super(itemView);
             tvPrestasi = itemView.findViewById(R.id.tv_user_nama_prestasi);
             tvStatus = itemView.findViewById(R.id.tv_status);
-            cardview = itemView.findViewById(R.id.cardView);
+            cardview = itemView.findViewById(R.id.cardViewA);
         }
     }
 }

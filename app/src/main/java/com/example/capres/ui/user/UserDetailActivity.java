@@ -23,12 +23,12 @@ public class UserDetailActivity extends AppCompatActivity {
 
         Log.e("datanya", event.getEvent());
 
-        tvnama = findViewById(R.id.tv_nama);
-        tvnamaevent= findViewById(R.id.tv_nama_event);
-        tvtanggal= findViewById(R.id.tv_tanggal_input);
-        tvpembimbing= findViewById(R.id.tv_pembimbing);
-        tvketeranganevent= findViewById(R.id.tv_keterangan_event);
-        tvlinkgdrive= findViewById(R.id.tv_link_gdrive);
+        tvnama = findViewById(R.id.tvA_nama);
+        tvnamaevent= findViewById(R.id.tvA_nama_event);
+        tvtanggal= findViewById(R.id.tvA_tanggal_input);
+        tvpembimbing= findViewById(R.id.tvA_pembimbing);
+        tvketeranganevent= findViewById(R.id.tvA_keterangan_event);
+        tvlinkgdrive= findViewById(R.id.tvA_link_gdrive);
 
 
         tvnama.setText(event.getUser());

@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical" >
     <TextView
-        android:id="@+id/tv_nama_prestasi"
+        android:id="@+id/tvA_nama_prestasi"
         android:layout_width="436dp"
         android:layout_height="178dp"
         android:background="@drawable/textview_border"
@@ -31,7 +31,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tv_nama"
+            android:id="@+id/tvA_nama"
             android:layout_width="325dp"
             android:layout_height="37dp"
             android:layout_marginTop="16dp"
@@ -57,7 +57,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.142"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_nama_prestasi" />
+            app:layout_constraintTop_toBottomOf="@+id/tvA_nama_prestasi" />
 
         <TextView
             android:id="@+id/textView6"
@@ -72,10 +72,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.15"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_nama" />
+            app:layout_constraintTop_toBottomOf="@+id/tvA_nama" />
 
         <TextView
-            android:id="@+id/tv_nama_event"
+            android:id="@+id/tvA_nama_event"
             android:layout_width="325dp"
             android:layout_height="37dp"
             android:layout_marginTop="8dp"
@@ -100,10 +100,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.164"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_nama_event" />
+            app:layout_constraintTop_toBottomOf="@+id/tvA_nama_event" />
 
         <TextView
-            android:id="@+id/tv_tanggal_input"
+            android:id="@+id/tvA_tanggal_input"
             android:layout_width="325dp"
             android:layout_height="37dp"
             android:layout_marginTop="8dp"
@@ -128,10 +128,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.153"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_tanggal_input" />
+            app:layout_constraintTop_toBottomOf="@+id/tvA_tanggal_input" />
 
         <TextView
-            android:id="@+id/tv_link_gdrive"
+            android:id="@+id/tvA_link_gdrive"
             android:layout_width="325dp"
             android:layout_height="37dp"
             android:layout_marginTop="8dp"
@@ -156,10 +156,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.186"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_pembimbing" />
+            app:layout_constraintTop_toBottomOf="@+id/tvA_pembimbing" />
 
         <TextView
-            android:id="@+id/tv_keterangan_event"
+            android:id="@+id/tvA_keterangan_event"
             android:layout_width="325dp"
             android:layout_height="37dp"
             android:layout_marginTop="12dp"
@@ -184,10 +184,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.15"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_keterangan_event" />
+            app:layout_constraintTop_toBottomOf="@+id/tvA_keterangan_event" />
 
         <TextView
-            android:id="@+id/tv_pembimbing"
+            android:id="@+id/tvA_pembimbing"
             android:layout_width="325dp"
             android:layout_height="37dp"
             android:layout_marginTop="12dp"
@@ -216,10 +216,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.174"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_link_gdrive" />
+            app:layout_constraintTop_toBottomOf="@+id/tvA_link_gdrive" />
 
         <TextView
-            android:id="@+id/tv_penyelenggara"
+            android:id="@+id/tvA_penyelenggara"
             android:layout_width="325dp"
             android:layout_height="37dp"
             android:layout_marginTop="4dp"
