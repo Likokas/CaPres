@@ -41,7 +41,13 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Event event = eventList.get(position);
         holder.tvPrestasi.setText(event.getPrestasi());
-        holder.tvStatus.setText(event.getApproved());
+        if (event.getApproved().equals("0")){
+            holder.tvStatus.setText("Pending");
+        }else if (event.getApproved().equals("1")){
+            holder.tvStatus.setText("Approve");
+        }else {
+            holder.tvStatus.setText("Decline");
+        }
     }
 
     @Override

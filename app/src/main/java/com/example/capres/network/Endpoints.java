@@ -29,4 +29,6 @@ public interface Endpoints {
 
     @POST("logout")
     Call<LogoutResponse> logout();
+
+    
 }
