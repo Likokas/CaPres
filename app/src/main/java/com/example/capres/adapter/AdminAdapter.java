@@ -25,14 +25,14 @@ public class AdminAdapter extends RecyclerView.Adapter<AdminAdapter.ViewHolder> 
         this.context = context;
     }
 
-    public void setEventList(List<Event> eventList) {
+    public void setEventList(List<Event> eventList) { //menyimpan data yang dikirim
         this.eventList = eventList;
-        notifyDataSetChanged();
+        notifyDataSetChanged();//deteksi perubahan data
     }
 
     @NonNull
     @Override
-    public AdminAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public AdminAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) { //yang mengatur output cardview
         View view = LayoutInflater.from(context).inflate(R.layout.admin_adapter, parent, false);
         return new AdminAdapter.ViewHolder(view);
     }
