@@ -1,8 +1,11 @@
 package com.example.capres.model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.google.gson.annotations.SerializedName;
 
-public class Event {
+public class Event implements Parcelable {
 
     @SerializedName("event_id")
     String event;
@@ -23,6 +26,30 @@ public class Event {
     @SerializedName("is_approved")
     String approved;
 
+
+    protected Event(Parcel in) {
+        event = in.readString();
+        user = in.readString();
+        prestasi = in.readString();
+        bukti = in.readString();
+        dosen = in.readString();
+        point = in.readString();
+        tanggal = in.readString();
+        pesan = in.readString();
+        approved = in.readString();
+    }
+
+    public static final Creator<Event> CREATOR = new Creator<Event>() {
+        @Override
+        public Event createFromParcel(Parcel in) {
+            return new Event(in);
+        }
+
+        @Override
+        public Event[] newArray(int size) {
+            return new Event[size];
+        }
+    };
 
     public String getEvent() {
         return event;
@@ -94,5 +121,23 @@ public class Event {
 
     public void setApproved(String approved) {
         this.approved = approved;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(event);
+        parcel.writeString(user);
+        parcel.writeString(prestasi);
+        parcel.writeString(bukti);
+        parcel.writeString(dosen);
+        parcel.writeString(point);
+        parcel.writeString(tanggal);
+        parcel.writeString(pesan);
+        parcel.writeString(approved);
     }
 }

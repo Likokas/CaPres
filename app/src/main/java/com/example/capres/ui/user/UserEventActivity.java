@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -73,6 +74,7 @@ public class UserEventActivity extends AppCompatActivity {
                 userAdapter.setEventList(events);
                 userAdapter.notifyDataSetChanged();
                 rv_user.setAdapter(userAdapter);
+                Log.e("data1", events.toString());
             }
         }
     };
