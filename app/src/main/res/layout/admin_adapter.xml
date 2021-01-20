@@ -69,6 +69,18 @@
                 app:layout_constraintTop_toBottomOf="@+id/tv_admin_nama_prestasi"
                 app:srcCompat="@drawable/ic_baseline_close_24" />
 
+            <TextView
+                android:id="@+id/txt_pending"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="36dp"
+                android:text="PENDING"
+                android:textColor="@color/warna_utama"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_admin_nama_prestasi" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 

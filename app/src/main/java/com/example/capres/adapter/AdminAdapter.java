@@ -47,12 +47,15 @@ public class AdminAdapter extends RecyclerView.Adapter<AdminAdapter.ViewHolder> 
         if (event.getApproved().equals("1")){
             holder.btn_approve.setVisibility(View.INVISIBLE);
             holder.btn_decline.setVisibility(View.INVISIBLE);
+            holder.tvStatus.setText("APPROVE");
         }else if (event.getApproved().equals("2")){
             holder.btn_approve.setVisibility(View.INVISIBLE);
             holder.btn_decline.setVisibility(View.INVISIBLE);
+            holder.tvStatus.setText("DECLINE");
         }else if (event.getApproved().equals("0")){
             holder.btn_approve.setVisibility(View.VISIBLE);
             holder.btn_decline.setVisibility(View.VISIBLE);
+            holder.tvStatus.setVisibility(View.INVISIBLE);
         }
 
         holder.cardviewA.setOnClickListener(new View.OnClickListener() {
@@ -82,6 +85,7 @@ public class AdminAdapter extends RecyclerView.Adapter<AdminAdapter.ViewHolder> 
             cardviewA = itemView.findViewById(R.id.cardViewA);
             btn_approve = itemView.findViewById(R.id.ib_approve);
             btn_decline = itemView.findViewById(R.id.ib_decline);
+            tvStatus = itemView.findViewById(R.id.txt_pending);
 
         }
     }
