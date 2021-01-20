@@ -13,7 +13,7 @@ import com.example.capres.R;
 import com.example.capres.model.Event;
 
 public class UserDetailActivity extends AppCompatActivity {
-    TextView tvnama, tvnamaevent, tvtanggal, tvpembimbing, tvketeranganevent, tvlinkgdrive;
+    TextView tvnama, tvnamaevent, tvtanggal, tvpembimbing, tvketeranganevent, tvlinkgdrive, tvnamaprestasi;
 
 
     @Override
@@ -28,6 +28,7 @@ public class UserDetailActivity extends AppCompatActivity {
 
         Log.e("datanya", event.getEvent());
 
+        tvnamaprestasi = findViewById(R.id.tvA_nama_prestasi);
         tvnama = findViewById(R.id.tvA_nama);
         tvnamaevent= findViewById(R.id.tvA_nama_event);
         tvtanggal= findViewById(R.id.tvA_tanggal_input);
@@ -35,7 +36,7 @@ public class UserDetailActivity extends AppCompatActivity {
         tvketeranganevent= findViewById(R.id.tvA_keterangan_event);
         tvlinkgdrive= findViewById(R.id.tvA_link_gdrive);
 
-
+        tvnamaprestasi.setText(event.getPrestasi());
         tvnama.setText(event.getUser());
         tvnamaevent.setText(event.getEvent());
         tvtanggal.setText(event.getTanggal());

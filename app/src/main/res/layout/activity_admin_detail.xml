@@ -121,21 +121,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/tvA_keterangan_event" />
 
             <TextView
-                android:id="@+id/textView14"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:text="PENYELENGGARA"
-                android:textAllCaps="true"
-                android:textColor="@color/warna_utama"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.17"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvA_link_gdrive" />
-
-            <TextView
                 android:id="@+id/tvA_nama"
                 android:layout_width="325dp"
                 android:layout_height="37dp"
@@ -180,6 +165,7 @@
                 android:layout_marginTop="11dp"
                 android:background="@drawable/textview_border"
                 android:text="gdrive.com"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.523"
                 app:layout_constraintStart_toStartOf="parent"
@@ -210,18 +196,6 @@
                 app:layout_constraintHorizontal_bias="0.523"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView9" />
-
-            <TextView
-                android:id="@+id/tvA_penyelenggara"
-                android:layout_width="325dp"
-                android:layout_height="37dp"
-                android:layout_marginTop="16dp"
-                android:background="@drawable/textview_border"
-                android:text="Laura"
-                android:textAllCaps="true"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
