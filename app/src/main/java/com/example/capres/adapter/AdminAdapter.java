@@ -9,6 +9,8 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.capres.R;
@@ -42,6 +44,16 @@ public class AdminAdapter extends RecyclerView.Adapter<AdminAdapter.ViewHolder> 
     public void onBindViewHolder(@NonNull AdminAdapter.ViewHolder holder, int position) {
         Event event = eventList.get(position);
         holder.tvAPrestasi.setText(event.getPrestasi());
+        if (event.getApproved().equals("1")){
+            holder.btn_approve.setVisibility(View.INVISIBLE);
+            holder.btn_decline.setVisibility(View.INVISIBLE);
+        }else if (event.getApproved().equals("2")){
+            holder.btn_approve.setVisibility(View.INVISIBLE);
+            holder.btn_decline.setVisibility(View.INVISIBLE);
+        }else if (event.getApproved().equals("0")){
+            holder.btn_approve.setVisibility(View.VISIBLE);
+            holder.btn_decline.setVisibility(View.VISIBLE);
+        }
 
         holder.cardviewA.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,12 +73,15 @@ public class AdminAdapter extends RecyclerView.Adapter<AdminAdapter.ViewHolder> 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         private TextView tvAPrestasi, tvStatus;
+        private ImageButton btn_approve, btn_decline;
         private CardView cardviewA;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             tvAPrestasi = itemView.findViewById(R.id.tv_admin_nama_prestasi);
             cardviewA = itemView.findViewById(R.id.cardViewA);
+            btn_approve = itemView.findViewById(R.id.ib_approve);
+            btn_decline = itemView.findViewById(R.id.ib_decline);
 
         }
     }
